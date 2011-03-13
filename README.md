@@ -10,6 +10,11 @@ Installation
 ------------
 
 1. Configure local\_settings.py:
+2. Syncdb `./manage.py fetch_feeds`
+3. Profit
+
+Settings
+--------
 
     DATABASE_ENGINE = 'mysql'      # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
     DATABASE_NAME = 'rss_filter'   # Or path to database file if using sqlite3.
@@ -21,6 +26,3 @@ Installation
     EMAIL_HOST_PASSWORD = 'userpass'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-
-2. Syncdb `./manage.py fetch_feeds`
-3. Profit
