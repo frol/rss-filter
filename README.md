@@ -9,9 +9,10 @@ After you add feeds in web run `./manage.py fetch_feeds`
 Installation
 ------------
 
-1. Configure local\_settings.py:
-2. Syncdb `./manage.py syncdb`
-3. Profit
+1. Install requirements `pip install -r deploy/requirements.txt`
+2. Configure local\_settings.py:
+3. Syncdb `./manage.py syncdb`
+4. Profit
 
 Settings
 --------
