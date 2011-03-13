@@ -10,7 +10,7 @@ Installation
 ------------
 
 1. Configure local\_settings.py:
-2. Syncdb `./manage.py fetch_feeds`
+2. Syncdb `./manage.py syncdb`
 3. Profit
 
 Settings
