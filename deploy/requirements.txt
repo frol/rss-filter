@@ -1,0 +1,8 @@
+django==1.1.1
+mysql-python
+# mailer
+git+http://github.com/jtauber/django-mailer.git
+django-pagination
+django-uni-form
+feedparser
+lockfile

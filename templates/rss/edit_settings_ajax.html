@@ -1,0 +1,8 @@
+{% load uni_form_tags %}
+
+<form method="POST" action="{% url edit_settings %}" class="uniForm">
+    <fieldset class="inlineLabels">
+        {{ form|as_uni_form }}
+    </fieldset>
+    <input type="submit" value="Save settings">
+</form>

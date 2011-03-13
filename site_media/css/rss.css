@@ -1,0 +1,16 @@
+.feed_item {
+    width; 100%;
+    overflow: hidden;
+}
+
+.feed_item .title {
+    font-size: 20px;
+}
+
+#id_keywords {
+    height: 60px;
+}
+
+.action_ico {
+    width: 20px;
+}

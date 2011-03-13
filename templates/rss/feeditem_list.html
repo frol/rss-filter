@@ -1,0 +1,13 @@
+{% extends "rss/base.html" %}
+
+{% load pagination_tags %}
+
+{% block head_title %}News{% endblock %}
+
+{% block body %}
+    {% autopaginate feed_item_list %}
+    {% for feed_item in feed_item_list %}
+        {% include "rss/feeditem_item.html" %}
+    {% endfor %}
+    {% paginate %}
+{% endblock %}

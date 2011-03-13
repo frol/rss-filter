@@ -1,0 +1,21 @@
+<div class="feed_item">
+    <div class="title">
+        {{ feed_item.feed.title }} &rarr; <a href="{{ feed_item.link }}">{{ feed_item.title }}</a>
+        {% if feed_item.is_favorite %}
+            (<span><a href="{% url feed_item_unmark_favorite feed_item.id %}" rel='link'>Unmark favorite</a></span>)
+        {% else %}
+            (<span><a href="{% url feed_item_mark_favorite feed_item.id %}" rel='link'>Mark as favorite</a></span>)
+        {% endif %}
+    </div>
+    <div class="info">
+        {% if feed_item.author %}Author: {{ feed_item.author }}, {% endif %}Date: {{ feed_item.updated_datetime }}<br>
+    </div>
+    {% if feed_item.content %}
+        <div class="content">
+            <br>
+            {{ feed_item.content|safe }}<br>
+            <a href="{{ feed_item.link }}">More ...</a>
+        </div>
+    {% endif %}
+</div>
+<hr /><br /><br />

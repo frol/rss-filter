@@ -1,0 +1,329 @@
+/* GENERAL */
+* {
+    vertical-align: top;
+}
+
+body {
+/*    background-color: #CED2F4; */
+    background: url('../img/background.jpg');
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+img {
+    border: 0;
+}
+
+input[type="text"] {
+    border: 1px solid #AAA;
+}
+
+textarea {
+    border: 1px solid #BDC7D8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+a, .link {
+    color: #33F;
+    text-decoration: none;
+}
+
+thead {
+    font-weight: bold;
+}
+
+.link {
+    display: block;
+    padding: 7px;
+}
+
+.link:hover {
+    background-color: #EEE;
+}
+
+a:hover, .link:hover {
+    color: #77F;
+    cursor: pointer;
+}
+
+.center {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#top_bar {
+    background-color: #000;
+    height: 37px;
+}
+
+#logo {
+    background: url('../img/logo.png') no-repeat;
+    margin-top: -20px;
+    height: 170px;
+}
+
+#logo .rss_links {
+    float: right;
+    margin-top: 113px;
+    text-align: right;
+}
+
+#logo .rss_links img {
+    margin-top: 4px;
+}
+
+#logo .rss_links a span {
+    color: black;
+    text-decoration: underline;
+}
+
+#body_outer {
+    background-color: #FFF;
+}
+
+#body {
+    padding: 15px;
+    clear: both;
+}
+
+#footer {
+}
+
+.menu, .subnav_menu {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_element, .subnav_menu_element {
+    list-style: none;
+}
+
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    line-height: 0.6em;
+}
+
+.menu_admin {
+    float: right;
+}
+
+.menu_admin .menu_element a {
+    color: red;
+}
+
+.menu_element {
+    float: left;
+    position: relative;
+}
+
+.menu_element:hover {
+    background-color: #222;
+}
+
+.menu_element a {
+    color: #A5A5A5;
+    display: block;
+    padding: 14px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu_element a:hover {
+    color: #FFF;
+}
+
+.subnav_menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    line-height: 0.6em;
+}
+
+.subnav_menu_element {
+    float: left;
+    position: relative;
+}
+
+.subnav_menu_element:hover {
+    background-color: #999;
+}
+
+.subnav_menu_element a {
+    color: #222;
+    display: block;
+    padding: 14px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.subnav_menu_element a:hover {
+    color: #FFF;
+}
+
+#body_outer>.title {
+    height: 37px;
+    padding: 0;
+    background: url(../img/title.jpg) repeat-x 0% 0%;
+    line-height: 0.6em;
+}
+
+.title_text {
+    padding: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CLEARS */
+
+.clearboth {
+    clear: both;
+}
+
+/* reference:
+ *   http://www.positioniseverything.net/easyclearing.html
+ *   http://www.zeldman.com/2006/10/27/ie7fixes1/
+ *      comment by michael on 10/28/2006
+ */
+.clearfix {
+    min-height: 1%;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* hides from ie5-mac \*/
+* html .clearfix { height: 1%; }
+/* end hide from ie5-mac */
+
+/* FORMS */
+
+form th {
+    text-align : left;
+}
+
+input[type=submit], input[type=button] {
+    background: #309bbf;
+    margin: 20px 0;
+    font-size: 14pt;
+    padding: 3px;
+    margin: 3px;
+}
+.
+input[type="text"], input[type="password"], textarea {
+    padding: 3px;
+    margin: 3px;
+    border: solid 1px #C6C6C6;
+    border-bottom: solid 1px #E3E3E3;
+    color: #666;
+    font-size: 12pt;
+    background: #F3F3F3 url('../img/form-shadow.png') left top repeat-x;
+}
+ul.errorlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: red;
+}
+
+
+/* MESSAGES */
+
+ul#messages {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+}
+ul#messages li {
+    padding: 5px 10px;
+    background: #EFD;
+    margin: 3px;
+    border: 1px solid #BC9;
+}
+ul#messages li a {
+    float: right;
+    color: #693;
+}
+
+
+/* WHAT NEXT */
+
+dl.what_next {
+    margin: 2em;
+}
+dl.what_next dt {
+    font-size: 120%;
+}
+dl.what_next dd {
+    margin: 0 0 1em 0;
+    font-style: italic;
+}
+p.what_next {
+    font-size: 120%;
+}
+
+
+/* EXTRAS TO CLEAN UP */
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+div.profile_info p {
+    margin: 0;
+}
+
+
+/* datepicker fix */
+.inlineLabels input[type="text"] {
+    float: left;
+}
+.actions {
+    width: 200px;
+}
+.actions a.action {
+    display: block;
+    padding-left: 7px;
+    line-height: 2em;
+}
+.actions a.inline_action {
+    line-height: 2em;
+    padding: 5px 7px;
+}
+.actions a:hover {
+    background-color: #DDD;
+}
+.actions .disabled_action {
+    padding-left: 7px;
+    line-height: 2em;
+    margin: 0;
+}
+.actions .inline_action {
+    line-height: 2em;
+    margin: 0;
+}
+.icon_success, .icon_error {
+    padding-top: 5px;
+}

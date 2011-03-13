@@ -1,0 +1,20 @@
+{% extends "rss/base.html" %}
+
+{% load pagination_tags %}
+
+{% block head_title %}Favorite News{% endblock %}
+
+{% block body %}
+    <h1>Favorite news:</h1>
+    {% if not feed_item_list %}
+        None favorite news
+    {% else %}
+        {% autopaginate feed_item_list %}
+        {% for feed_fav_item in feed_item_list %}
+            {% with feed_fav_item.feed_item as feed_item %}
+                {% include "rss/feeditem_item.html" %}
+            {% endwith %}
+        {% endfor %}
+        {% paginate %}
+    {% endif %}
+{% endblock %}

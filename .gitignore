@@ -1,0 +1,22 @@
+# Ignore all temproray, log and avatar files
+*.pyc
+local_settings.py
+*.swp
+*~
+core4*
+nbproject/
+*.mo
+.svn
+.git
+*.log
+media/avatars/*
+static/avatars/*
+static/blog_icons/*
+media/uploads/*
+static/uploads/*
+deploy/var/log/*
+build/
+escalibro.db
+deploy/tornading.py
+manage.py
+Thumbs.db

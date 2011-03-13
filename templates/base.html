@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>RSS filter: {% block head_title %}{% endblock %}</title>
+    <meta name="keywords" content="news, feed, rss" />
+    <meta name="Description" content="RSS Feeds filter by keywords" />
+    <link href="{{ MEDIA_URL }}css/forms.css" rel="stylesheet" type="text/css">
+    <link href="{{ MEDIA_URL }}css/facebox.css" rel="stylesheet">
+    <link href="{{ MEDIA_URL }}uni_form/uni-form.css" rel="stylesheet" type="text/css">
+    <link href="{{ MEDIA_URL }}css/base.css" rel="stylesheet" type="text/css">
+    <script src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js" language="JavaScript" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}uni_form/uni-form.jquery.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}js/misc.js" type="text/javascript"></script>
+
+    <link rel="alternate" type="application/rss+xml" title="All news" href="/rss/all/" />
+    <link rel="alternate" type="application/rss+xml" title="Filtered news" href="/rss/filtered/" />
+    {% block extra_head_base %}
+        {% block extra_head %}{% endblock %}
+    {% endblock %} 
+</head>
+<body>
+    <div id="top_bar">
+        <div class="menu_container center">
+            <ul class="menu">
+                <li class="menu_element"><a href="{% url feed_item_list 'all' %}">Show all news</a></li>
+                <li class="menu_element"><a href="{% url feed_item_list 'filtered' %}">Show filtered news</a></li>
+                <li class="menu_element"><a href='{% url feed_favorite_item_list %}'>Favorites</a></li>
+                <li class="menu_element"><a href='{% url edit_settings %}' rel='facebox'>Edit settings</a></li>
+                <li class="menu_element"><a href='{% url feed_list %}'>Manage feeds</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="logo" class="center">
+        <div class="rss_links">
+            <a type="application/rss+xml" href="/rss/all/"><span>RSS: All news</span> <img src="{{ MEDIA_URL }}img/rss_ico.png"></a><br />
+            <a type="application/rss+xml" href="/rss/filtered/"><span>RSS: Filtered news</span> <img src="{{ MEDIA_URL }}img/rss_ico.png"></a>
+        </div>
+    </div>
+    <div id="body_outer" class="center">
+        {% block body_outer %}
+            <div class="title center">
+            </div>
+            <div id="body">
+                {% block body %}
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+    <div id="footer" class="center">
+        {% block footer %}{% endblock %}
+    </div>
+    {% include "facebox_js.html" %}
+</body>
+</html>

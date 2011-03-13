@@ -1,0 +1,23 @@
+{% extends "rss/base.html" %}
+
+{% load pagination_tags %}
+
+{% block head_title %}Manage Feeds{% endblock %}
+
+{% block body %}
+    <h1>Feeds:</h1>
+    {% autopaginate feed_list %}
+    <table>
+        {% for feed in feed_list %}
+            <tr>
+                <td>
+                    <a href="{% url feed_delete feed.id %}"><img src="{{ MEDIA_URL }}img/remove.png" class="action_ico"></a>
+                </td>
+                <td>{{ feed.title }}</td>
+                <td>{{ feed.feed_url }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url feed_add %}" rel="facebox"><img src="{{ MEDIA_URL }}img/add.png" class="action_ico"> Add new feed</a>
+    {% paginate %}
+{% endblock %}

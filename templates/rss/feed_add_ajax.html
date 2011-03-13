@@ -1,0 +1,8 @@
+{% load uni_form_tags %}
+
+<form method="POST" action="{% url feed_add %}" class="uniForm">
+    <fieldset class="inlineLabels">
+        {{ form|as_uni_form }}
+    </fieldset>
+    <input type="submit" value="Add feed">
+</form>
