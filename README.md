@@ -1,6 +1,8 @@
 RSS filter
 ====================
 
+![Preview](https://raw.github.com/frol/rss-filter/master/site_media/img/preview.png)
+
 Usage
 -----
 
