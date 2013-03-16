@@ -1,7 +1,7 @@
-django==1.1.1
+django==1.2.7
 mysql-python
 # mailer
-git+http://github.com/jtauber/django-mailer.git
+git+http://github.com/pinax/django-mailer.git
 django-pagination
 django-uni-form
 feedparser
